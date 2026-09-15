@@ -1,0 +1,43 @@
+{
+  "appId": "com.noxen.business",
+  "productName": "Noxen Business",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "electron-main.cjs",
+    "build/**/*",
+    "package.json"
+  ],
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb"
+    ],
+    "category": "Office"
+  },
+  "mac": {
+    "target": [
+      "dmg",
+      "zip"
+    ],
+    "category": "public.app-category.business"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64", "ia32"]
+      }
+    ],
+    "icon": "build/icon.png"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "installerIcon": "build/icon.png"
+  }
+}

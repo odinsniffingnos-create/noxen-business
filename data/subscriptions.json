@@ -1,0 +1,16 @@
+{
+  "owner@noxenbusiness.com": {
+    "email": "owner@noxenbusiness.com",
+    "planId": "scale",
+    "billingFrequency": "monthly",
+    "status": "active",
+    "amount": 99,
+    "nextBillingDate": "2026-10-15",
+    "paymentMethod": "Local demo checkout • Visa •••• 4242",
+    "autoRenew": true,
+    "cancellationDate": null,
+    "provider": "local-demo",
+    "paymentStatus": "paid",
+    "updatedAt": "2026-09-15T01:05:49.057Z"
+  }
+}
