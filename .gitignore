@@ -9,4 +9,6 @@ npm-debug.log*
 .DS_Store
 coverage/
 build/
+release/
+buildlog.txt
 *.log
