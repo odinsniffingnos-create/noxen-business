@@ -6,7 +6,7 @@ import path from 'path';
 import Stripe from 'stripe';
 import { fileURLToPath } from 'url';
 
-const app = express();
+export const app = express();
 const port = Number(process.env.PORT || 3001);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -331,6 +331,12 @@ const createCheckoutSessionHandler = async (req, res) => {
 app.post('/api/stripe/checkout', createCheckoutSessionHandler);
 app.post('/api/checkout', createCheckoutSessionHandler);
 
-app.listen(port, () => {
-  console.log(`Noxen subscription backend running on http://localhost:${port}`);
-});
+export const startServer = (currentPort = port) => {
+  return app.listen(currentPort, () => {
+    console.log(`Noxen subscription backend running on http://localhost:${currentPort}`);
+  });
+};
+
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  startServer(port);
+}

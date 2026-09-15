@@ -10,7 +10,7 @@
     "dev": "vite --host 0.0.0.0 --port 4173",
     "build": "vite build",
     "server": "node server.js",
-    "start": "node server.js",
+    "start": "node web-server.js",
     "dev:all": "concurrently \"npm run server\" \"npm run dev\"",
     "preview": "vite preview --host 0.0.0.0 --port 4173",
     "generate:icon": "node scripts/generate-icon.js",
